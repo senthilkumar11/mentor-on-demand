@@ -1,19 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from 'src/app/service/admin.service';
-import { Technology } from 'src/app/models/technology';
 
 @Component({
-  selector: 'app-list-technology',
-  templateUrl: './list-technology.component.html',
-  styleUrls: ['./list-technology.component.css']
+  selector: 'app-user-tech-list',
+  templateUrl: './user-tech-list.component.html',
+  styleUrls: ['./user-tech-list.component.css']
 })
-export class ListTechnologyComponent implements OnInit {
+export class UserTechListComponent implements OnInit {
+
   tech:String[];
   constructor(private adminService:AdminService) { }
 
   ngOnInit() {
     this.adminService.getTech().subscribe(response=> this.tech=response)
   }
-
 
 }

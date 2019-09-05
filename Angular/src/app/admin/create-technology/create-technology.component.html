@@ -1,9 +1,50 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <app-header></app-header>
 <div class="main">
-        <app-nav-bar></app-nav-bar>
+        <!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+  
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home
+     
+          </a>
+        </li>
+        
+        <li class="nav-item active">
+          <a class="nav-link" href="/listtech">Technology</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/listmentor">Mentor</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/listuser">User</a>
+        </li>
+    
+      </ul>
+      <!-- Links -->
+  
+      <form class="form-inline">
+        <div class="md-form my-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        </div>
+      </form>
+    </div>
+    <!-- Collapsible content -->
+  
+  </nav>
+  <!--/.Navbar-->
+
 
         <div id="login">
     
@@ -11,7 +52,7 @@
                     <div id="login-row" class="row justify-content-center align-items-center">
                         <div id="login-column" class="col-md-6">
                             <div id="login-box" class="col-md-12">
-                                <form id="login-form" class="form" (ngSubmit)="registerUser()">
+                                <form id="login-form" class="form" (ngSubmit)="addTech()">
                                     <h3 class="text-center text-info">Add Technology</h3>
                                     <div class="form-group">
                                         <label for="techname" class="text-info">Technology:</label><br>
@@ -19,7 +60,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="desc" class="text-info">Description:</label><br>
-                                        <input type="" name="desc" id="desc" class="form-control" [(ngModel)]="lastname">
+                                        <input type="" name="desc" id="desc" class="form-control" [(ngModel)]="desc">
                                     </div>
                                     
                                     <div class="form-group">

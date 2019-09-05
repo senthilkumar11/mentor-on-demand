@@ -11,7 +11,7 @@ public class Technology {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long techId;
 	private String name;
-	private String decription;
+	private String description;
 	 
 	public long getTechId() {
 		return techId;
@@ -25,11 +25,11 @@ public class Technology {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getDecription() {
-		return decription;
+	public String getDescription() {
+		return description;
 	}
-	public void setDecription(String decription) {
-		this.decription = decription;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
 	

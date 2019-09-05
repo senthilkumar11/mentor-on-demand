@@ -1,12 +1,12 @@
 export class User {
 
     userId: number;
-     firstName: String;
-     lastName:String;
-     gender: String;
-     mailId: String;
-     password: String;
-     mobileNumber: String;
+     firstName: string;
+     lastName:string;
+     gender: string;
+     mailId: string;
+     password: string;
+     mobileNumber: string;
  
      constructor(firstname,lastname,gender,email,password,contactNumber) {
          this.firstName = firstname;

@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
-
 import { HttpClient } from '@angular/common/http';
-import {Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class MentorService {
+
   private baseUrl = 'http://localhost:9091';
   constructor(private http: HttpClient) { }
 
-  registerUser(user:Object):Observable<any>
+  
+  registerMentor(mentor:Object):Observable<any>
   {
-    console.log(user)
-  return this.http.post(`${this.baseUrl}`+`/registeruser`,user);
+    console.log('mentor')
+  return this.http.post(`${this.baseUrl}`+`/registermentor`,mentor);
   }
 }

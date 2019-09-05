@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { AdminProfileComponent } from './admin/admin-profile/admin-profile.component';
 import { MentorRegisterComponent } from './mentor-register/mentor-register.component';
 import {  HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
@@ -18,6 +17,9 @@ import { ListTrainingComponent } from './admin/list-training/list-training.compo
 import { ListMentorComponent } from './admin/list-mentor/list-mentor.component';
 import { ListUserComponent } from './admin/list-user/list-user.component';
 import { ListPaymentHistoryComponent } from './admin/list-payment-history/list-payment-history.component';
+import { LogoutComponent } from './logout/logout.component';
+import { UserTechListComponent } from './user/user-tech-list/user-tech-list.component';
+import { SearchMentorComponent } from './user/search-mentor/search-mentor.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,6 @@ import { ListPaymentHistoryComponent } from './admin/list-payment-history/list-p
 
     LoginComponent,
     RegisterComponent,
-    AdminProfileComponent,
     MentorRegisterComponent,
     HeaderComponent,
     NavBarComponent,
@@ -34,7 +35,10 @@ import { ListPaymentHistoryComponent } from './admin/list-payment-history/list-p
     ListTrainingComponent,
     ListMentorComponent,
     ListUserComponent,
-    ListPaymentHistoryComponent
+    ListPaymentHistoryComponent,
+    LogoutComponent,
+    UserTechListComponent,
+    SearchMentorComponent
   ],
   imports: [
     BrowserModule,
