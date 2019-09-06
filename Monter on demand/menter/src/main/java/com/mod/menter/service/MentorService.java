@@ -10,4 +10,6 @@ public interface MentorService {
 
 	List<Mentor> getMentor()throws Exception;
 
+	Mentor getMentorByEmail(String email)throws Exception;
+
 }

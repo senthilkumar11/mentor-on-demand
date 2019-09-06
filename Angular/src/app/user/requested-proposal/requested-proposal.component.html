@@ -1,0 +1,122 @@
+<app-header></app-header>
+<div class="main">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/usertechlist">Technology</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/searchmentor">Search Mentor</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link active" href="/requested">Requested course</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link  " href="/completeusertraining">Completed Training</a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ongoingusertraining">Ongoing Training</a>
+                        </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/userpayment">Payment</a>
+                </li>
+
+            </ul>
+            <!-- Links -->
+
+            <form class="form-inline">
+                <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
+        </div>
+        <!-- Collapsible content -->
+
+    </nav>
+    <!--/.Navbar-->
+
+
+    <div class="bs-example">
+        
+            <h4 style="text-align: center">Bending & Declined proposal</h4>
+            <br>
+
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Id</th>
+                    <th>Technology</th>
+                    <th>Mentor Name</th>
+                    <th>Mentor Email</th>
+                    <th>Fee</th>
+                    <th>Time slot</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let prop of proposal">
+                    <ng-template [ngIf]="isApproved(prop.proposal)">
+                        <td>{{prop.id}}</td>
+                        <td>{{prop.tech}}</td>
+                        <td>{{prop.mentorName}}</td>
+                        <td>{{prop.mentorEmail}}</td>
+                        <td>{{prop.fee}}</td>
+                        <td>5 PM to 8 PM</td>
+                        <ng-template [ngIf]="isBending(prop.proposal)"[ngIfElse]="elseBlock" >
+                            <td>Bending</td>
+                        </ng-template>
+                        <ng-template #elseBlock><td>Declined</td></ng-template>
+
+                        </ng-template>
+                     </tr>
+    
+              </tbody>
+            </table>
+          </div>
+          <div class="bs-example">
+        
+                <h4 style="text-align: center">Approved</h4>
+                <br>
+    
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Id</th>
+                        <th>Technology</th>
+                        <th>Mentor Name</th>
+                        <th>Mentor Email</th>
+                        <th>Fee</th>
+                        <th>Time slot</th>
+                        <th>Payment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let prop of proposal">
+                        <ng-template [ngIf]="isPaid(prop.proposal,prop.payment)">
+                            <td>{{prop.id}}</td>
+                            <td>{{prop.tech}}</td>
+                            <td>{{prop.mentorName}}</td>
+                            <td>{{prop.mentorEmail}}</td>
+                            <td>{{prop.fee}}</td>
+                            <td>5 PM to 8 PM</td>
+                            <td><button (click)="payFee(prop)">Pay fee</button></td>
+                            </ng-template>
+                         </tr>
+        
+                  </tbody>
+                </table>
+              </div>
+          </div>

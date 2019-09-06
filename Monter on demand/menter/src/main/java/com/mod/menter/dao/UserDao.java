@@ -6,4 +6,6 @@ import com.mod.menter.model.User;
 
 public interface UserDao extends JpaRepository<User, Integer> {
 
+	User findByMailId(String email);
+
 }

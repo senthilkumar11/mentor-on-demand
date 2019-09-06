@@ -6,4 +6,6 @@ import com.mod.menter.model.Mentor;
 
 public interface MentorDao extends JpaRepository<Mentor, Integer>{
 
+	Mentor findByMailId(String email);
+
 }

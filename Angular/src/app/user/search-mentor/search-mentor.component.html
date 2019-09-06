@@ -14,20 +14,22 @@
 
             <!-- Links -->
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="/usertechlist">Technology</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/searchmentor">Search Mentor</a>
+                    <a class="nav-link active" href="/searchmentor">Search Mentor</a>
                 </li>
-
                 <li class="nav-item">
-                    <a class="nav-link" href="/completetraining">Completed Training</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/ongoingtraining">Ongoing Training</a>
-                </li>
+                        <a class="nav-link " href="/requested">Requested course</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link  " href="/completeusertraining">Completed Training</a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ongoingusertraining">Ongoing Training</a>
+                        </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/userpayment">Payment</a>
                 </li>
@@ -88,7 +90,7 @@
               <td>{{mentor.experience}}</td>
               <td>{{mentor.rating}}</td>
               <td>{{mentor.fee}}</td>
-              <td><button (click)="requestCourse(mentor.mentorId)">Request</button></td>
+              <td><button (click)="requestCourse(mentor)">Request</button></td>
             </tr>
           </tbody>
         </table>

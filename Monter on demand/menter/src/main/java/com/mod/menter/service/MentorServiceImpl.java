@@ -26,10 +26,12 @@ public class MentorServiceImpl implements MentorService{
 	mentorDao.save(mentor);
 		
 	}
-	@Override
 	public List<Mentor> getMentor() throws Exception {
 	
 		return mentorDao.findAll();
+	}
+	public Mentor getMentorByEmail(String email) throws Exception {
+		return mentorDao.findByMailId(email);
 	}
 
 }

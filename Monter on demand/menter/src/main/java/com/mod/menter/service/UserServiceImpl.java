@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import com.mod.menter.dao.LoginDao;
 import com.mod.menter.dao.UserDao;
 import com.mod.menter.model.Login;
@@ -30,5 +31,11 @@ public class UserServiceImpl implements UserService {
 		
 		return userDao.findAll();
 	}
+	@Override
+	public User getUserByEmail(String email) throws Exception {
+		return userDao.findByMailId(email);
+	}
+	
+
 
 }

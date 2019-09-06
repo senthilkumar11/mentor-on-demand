@@ -8,4 +8,6 @@ public interface UserService {
 public void registerUser(User user)throws Exception;
 
 public List<User> getUsers()throws Exception;
+
+public User getUserByEmail(String email)throws Exception;
 }

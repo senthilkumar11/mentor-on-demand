@@ -4,6 +4,7 @@ import { MentorService } from '../service/mentor.service';
 import { Router } from '@angular/router';
 import { LoginService } from '../service/login.service';
 import { Mentor } from '../models/mentor';
+import { AdminService } from '../service/admin.service';
 
 @Component({
   selector: 'app-mentor-register',
@@ -21,12 +22,14 @@ export class MentorRegisterComponent implements OnInit {
   fee:number;
   experience='';
   userlist:Login[];
+  tech: String[];
 
-  constructor(private mentorService:MentorService,private router: Router,private login:LoginService) { }
+  constructor(private mentorService:MentorService,private router: Router,private login:LoginService,private adminService: AdminService) { }
 
   ngOnInit() {this.login.getUsers().subscribe(async res => {
     this.userlist = await res;
-  }, error => alert(`${error.message}\nWaiting for response from server`))
+  }, error => alert(`${error.message}\nWaiting for response from server`));
+  this.adminService.getTech().subscribe(response => this.tech = response);
   }
 
 

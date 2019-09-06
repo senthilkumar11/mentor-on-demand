@@ -16,4 +16,9 @@ export class MentorService {
     console.log('mentor')
   return this.http.post(`${this.baseUrl}`+`/registermentor`,mentor);
   }
+  getMentorbyEmail(email:string)
+  {
+    console.log("getMentorbyEmail");
+    return this.http.get(`${this.baseUrl}`+`/findmentor/`+email);
+  }
 }

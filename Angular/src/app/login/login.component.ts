@@ -53,16 +53,19 @@ export class LoginComponent implements OnInit {
      else if(flag===1&&this.userType==="USER")
      {
        console.log(this.userType);
-       this.router.navigate(['/admin'])
+       this.router.navigate(['/usertechlist'])
        this.invalidLogin=false
      }
      else if(flag===1&&this.userType==="MENTOR")
      {
        console.log(this.userType);
-       this.router.navigate(['/mentor'])
+       this.router.navigate(['/proposal'])
        this.invalidLogin=false
      }
      else
+     {
+       alert('invalid login');
      this.invalidLogin=true
-   }
+     }
+  }
 }

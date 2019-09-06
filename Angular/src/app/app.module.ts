@@ -20,6 +20,13 @@ import { ListPaymentHistoryComponent } from './admin/list-payment-history/list-p
 import { LogoutComponent } from './logout/logout.component';
 import { UserTechListComponent } from './user/user-tech-list/user-tech-list.component';
 import { SearchMentorComponent } from './user/search-mentor/search-mentor.component';
+import { ProposalComponent } from './mentor/proposal/proposal.component';
+import { RequestedProposalComponent } from './user/requested-proposal/requested-proposal.component';
+import { UserTrainingComponent } from './user/user-training/user-training.component';
+import { MentorTrainingComponent } from './mentor/mentor-training/mentor-training.component';
+import { CompletedUserTrainingComponent } from './user/completed-user-training/completed-user-training.component';
+import { CompletedMentorrTrainingComponent } from './mentor/completed-mentorr-training/completed-mentorr-training.component';
+import { OngoingTrainingComponent } from './admin/ongoing-training/ongoing-training.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +45,14 @@ import { SearchMentorComponent } from './user/search-mentor/search-mentor.compon
     ListPaymentHistoryComponent,
     LogoutComponent,
     UserTechListComponent,
-    SearchMentorComponent
+    SearchMentorComponent,
+    ProposalComponent,
+    RequestedProposalComponent,
+    UserTrainingComponent,
+    MentorTrainingComponent,
+    CompletedUserTrainingComponent,
+    CompletedMentorrTrainingComponent,
+    OngoingTrainingComponent
   ],
   imports: [
     BrowserModule,
